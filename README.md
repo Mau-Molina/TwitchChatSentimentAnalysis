@@ -7,7 +7,7 @@ la idea GENERAL aqui es la siguiente
 4- visualizacion de resultados en dashboard
 
 
-SNIPPETS
+SNIPPETS ---------------------------------
 
 import twitchio
 
@@ -37,5 +37,13 @@ class Bot(twitchio.Client):
 # Create an instance of the Bot class and run it
 bot = Bot()
 bot.run()
+------------------------------------------
+
+In the code, make sure to replace 'YOUR_USERNAME' with your Twitch username and 'YOUR_OAUTH_TOKEN' with your Twitch OAuth token. You can generate an OAuth token for your Twitch account by visiting https://twitchapps.com/tmi/.
+
+Once you have updated the credentials, the code will connect to the specified Twitch stream and print the chat messages in the console. You can also add additional logic to process or respond to specific chat messages by checking the content of the messages.
+
+Remember to handle exceptions, customize the code based on your requirements, and refer to the TwitchIO documentation (https://github.com/TwitchIO/TwitchIO) for more advanced features and usage.
+
 
 
