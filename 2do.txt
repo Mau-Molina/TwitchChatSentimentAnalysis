@@ -1,0 +1,5 @@
+- refinar idea general
+- aprovisionar un ambiente "jira" (minimo kanban) sin costo
+- crear backlog
+- asignar tareas
+- refinar esta lista
