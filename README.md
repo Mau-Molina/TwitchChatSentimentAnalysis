@@ -9,6 +9,7 @@
 
 ---
 ## SNIPPETS 
+### obtener stream del chat de twitch
 
     import twitchio
 
@@ -38,7 +39,7 @@
     # Create an instance of the Bot class and run it
     bot = Bot()
     bot.run()
----
+
 
 In the code, make sure to replace 'YOUR_USERNAME' with your Twitch username and 'YOUR_OAUTH_TOKEN' with your Twitch OAuth token. You can generate an OAuth token for your Twitch account by visiting https://twitchapps.com/tmi/.  
 
@@ -47,4 +48,29 @@ Once you have updated the credentials, the code will connect to the specified Tw
 Remember to handle exceptions, customize the code based on your requirements, and refer to the TwitchIO documentation (https://github.com/TwitchIO/TwitchIO) for more advanced features and usage.  
 
 
+---
+### consumir modelo de lenguaje natural de gcp (python)
 
+
+    from google.cloud import language_v1
+
+
+    def sample_analyze_sentiment(content):
+
+        client = language_v1.LanguageServiceClient()
+
+        # content = 'Your text to analyze, e.g. Hello, world!'
+
+        if isinstance(content, bytes):
+            content = content.decode("utf-8")
+
+        type_ = language_v1.Document.Type.PLAIN_TEXT
+        document = {"type_": type_, "content": content}
+
+        response = client.analyze_sentiment(request={"document": document})
+        sentiment = response.document_sentiment
+        print(f"Score: {sentiment.score}")
+        print(f"Magnitude: {sentiment.magnitude}")
+
+
+https://cloud.google.com/natural-language/docs/analyzing-sentiment#language-sentiment-file-python
